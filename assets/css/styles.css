@@ -75,3 +75,31 @@ h3 {
 .cta-button-wedding:hover {
     background-color: #c43d25;
 }
+
+
+
+.video-container-youtube {
+    position: relative;
+    width: 80%; /* 80% of the width of the parent container */
+    margin: 0 auto; /* Center the video container horizontally */
+    padding-bottom: 45%; /* Adjusted padding-bottom for a 16:9 aspect ratio within 80% width */
+    height: 0;
+    overflow: hidden;
+}
+
+.responsive-video-youtube {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.responsive-video-youtube iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
