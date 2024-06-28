@@ -7194,6 +7194,7 @@ wpo-hero-slider-s4
 
 .wpo-team-section .wpo-team-wrap .wpo-team-item {
     text-align: center;
+    justify-content: center;
     margin-bottom: 30px;
 }
 
