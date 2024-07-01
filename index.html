@@ -642,8 +642,11 @@
         <section class="wpo-product-section section-padding">
             <div class="container">
                 <div class="wpo-section-title">
-                    <h4>Our Online Choreographies</h4>
+                    <h4>Some of Our Online Choreographies</h4>
                     <h2>Special Products For You</h2>
+                </div>
+                <div class="wpo-section-title">
+                    <a class="theme-btn" href="pricing.html">Check our Online Cataloge</a>
                 </div>
                 <div class="wpo-product-wrap">
                     <div class="row">
@@ -721,6 +724,9 @@
                         </div>
                     </div>
                 </div>
+                <div class="wpo-section-title">
+                    <a class="theme-btn" href="pricing.html">Check our Online Cataloge</a>
+                </div>
             </div> <!-- end container -->
         </section>
         <!-- end wpo-product-section -->
@@ -751,24 +757,17 @@
                                         <input class="form-control" name="date" autocomplete="off" type="text" id="datepicker" placeholder="Wedding Date">
                                     </div>
                                     <div>
-                                        <select name="guest" class="form-control">
-                                            <option disabled="disabled" selected>Number Of Guests</option>
-                                            <option>01</option>
-                                            <option>02</option>
-                                            <option>03</option>
-                                            <option>04</option>
-                                            <option>05</option>
+                                        <select name="topic" class="form-control last" id="topic">
+                                            <option disabled="disabled" selected>Topic</option>
+                                            <option>Wedding Dance Choreography</option>
+                                            <option>Wedding Dance Group Classes</option>
+                                            <option>Wedding Dance Privat Classes</option>
+                                            <option>Online Dance Classes</option>
+                                            <option>Wedding Dance Choreography Online</option>
                                         </select>
                                     </div>
                                     <div>
-                                        <select name="meal" class="form-control last">
-                                            <option disabled="disabled" selected>Meal Preferences</option>
-                                            <option>Chicken Soup</option>
-                                            <option>Motton Kabab</option>
-                                            <option>Chicken BBQ</option>
-                                            <option>Mix Salad</option>
-                                            <option>Beef Ribs </option>
-                                        </select>
+                                        <textarea class="form-control" name="message" id="message" placeholder="Message"></textarea>
                                     </div>
                                     <div class="submit-area">
                                         <button type="submit" class="theme-btn-s3">Send An Inquiry</button>
@@ -777,9 +776,8 @@
                                         </div>
                                     </div>
                                     <div class="clearfix error-handling-messages">
-                                        <div id="success">Thank you</div>
-                                        <div id="error"> Error occurred while sending email. Please try again later.
-                                        </div>
+                                        <div id="success">Thank you. You will receive an Email from info@alma-dance.de. Check also your spam folder.</div>
+                                        <div id="error">Error occurred while sending email. Please try again later.</div>
                                     </div>
                                 </form>
                             </div>
@@ -823,10 +821,10 @@
                                     <div class="wpo-pricing-bottom-text">
                                         <ul>
                                             <li>1 Originak Choreography</li>
-                                            <li>4 Private Lessons</li>
+                                            <li>3 Private Lessons</li>
                                             <li>Coaching before your performance</li>
                                         </ul>
-                                        <a class="theme-btn" href="pricing.html">Choose Plan</a>
+                                        <a class="theme-btn" href="checkout.html?plan=basic&price=370">Choose Plan</a>
                                     </div>
                                 </div>
                             </div>
@@ -836,7 +834,29 @@
                                 <div class="wpo-pricing-top">
                                     <div class="wpo-pricing-text">
                                         <h4>Standard Package</h4>
-                                        <h2>370 €<span></span></h2>
+                                        <h2>400 €<span></span></h2>
+                                    </div>
+                                </div>
+                                <div class="shape"><img src="assets/images/pricing/p-shape.svg" alt=""></div>
+                                <div class="wpo-pricing-bottom">
+                                    <div class="wpo-pricing-bottom-text">
+                                        <ul>
+                                            <li>1 Originak Choreography</li>
+                                            <li>3 Private Lessons</li>
+                                            <li>1 Month Group Dance Classes</li>
+                                            <li>Coaching before your performance</li>
+                                        </ul>
+                                        <a class="theme-btn" href="checkout.html?plan=standard&price=370&valid=1">Choose Plan</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col col-lg-4 col-md-6 col-12">
+                            <div class="wpo-pricing-item">
+                                <div class="wpo-pricing-top">
+                                    <div class="wpo-pricing-text">
+                                        <h4>Pro Package</h4>
+                                        <h2>450 €<span></span></h2>
                                     </div>
                                 </div>
                                 <div class="shape"><img src="assets/images/pricing/p-shape.svg" alt=""></div>
@@ -848,7 +868,7 @@
                                             <li>1 Month Group Dance Classes</li>
                                             <li>Coaching before your performance</li>
                                         </ul>
-                                        <a class="theme-btn" href="pricing.html">Choose Plan</a>
+                                        <a class="theme-btn" href="checkout.html?plan=luxury&price=480&valid=1">Choose Plan</a>
                                     </div>
                                 </div>
                             </div>
@@ -866,11 +886,11 @@
                                     <div class="wpo-pricing-bottom-text">
                                         <ul>
                                             <li>1 Originak Choreography</li>
-                                            <li>5 Private Lessons</li>
+                                            <li>4 Private Lessons</li>
                                             <li>2 Months Group Dance Classes</li>
                                             <li>Coaching before your performance</li>
                                         </ul>
-                                        <a class="theme-btn" href="pricing.html">Choose Plan</a>
+                                        <a class="theme-btn" href="checkout.html?plan=luxury&price=480&valid=2">Choose Plan</a>
                                     </div>
                                 </div>
                             </div>
@@ -1038,6 +1058,48 @@
     <script src="assets/js/jquery-plugin-collection.js"></script>
     <!-- Custom script for this template -->
     <script src="assets/js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('contact-form-main');
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+    
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const date = document.getElementById('datepicker').value;
+                const topic = document.getElementById('topic').value;
+                const message = document.getElementById('message').value;
+    
+                const data = JSON.stringify([name, message, email, topic, date]);
+    
+                const scriptURL = 'https://script.google.com/macros/s/AKfycby0bgJuGUwB4ltdEHfAyJed14jHiL4_o1mRU6lvl9UfY2iIKN-Q7az_avwKPFYkyTs/exec';
+    
+                fetch(scriptURL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: new URLSearchParams({ data: data })
+                })
+                .then(response => response.json())
+                .then(response => {
+                    if (response.status === 'success') {
+                        document.getElementById('success').style.display = 'block';
+                        document.getElementById('error').style.display = 'none';
+                    } else {
+                        document.getElementById('success').style.display = 'none';
+                        document.getElementById('error').style.display = 'block';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('success').style.display = 'none';
+                    document.getElementById('error').style.display = 'block';
+                });
+            });
+        });
+    </script>
+    
 </body>
 
 </html>
