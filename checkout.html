@@ -25,6 +25,7 @@
     <link href="assets/css/jquery-ui.css" rel="stylesheet">
     <link href="assets/sass/style.css" rel="stylesheet">
     <link href="assets/css/styles.css" rel="stylesheet">
+    <script src="https://www.paypal.com/sdk/js?client-id=Ad_vdC1plSPko5d9oY4CJeobC3WYQqtoyOthXJ0IcKfo38y-Ya9wcgRTglhuWrNSRyub31mxXLhUuAFM&enable-funding=venmo&vault=true&currency=EUR" data-sdk-integration-source="button-factory"></script>
 </head>
 
 <body>
@@ -204,32 +205,22 @@
             </div>
         </header>
         <!-- end of header -->
-        <!-- <div class="wedding" style="margin: 0%;padding: 0%; box-sizing: border-box; height: 100%; width: 100%;">
-        <section class="hero-wedding" style="justify-content: center; align-content: center; align-items: center; ">
-            <div class="video-container-wedding">
-                <video autoplay muted loop playsinline style="position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; object-fit: cover; transform: translate(-50%, -50%); z-index: -1;">
-                    <source src="assets/images/hero6.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="content-box-wedding">
-                    <h3 style="color: white;">Wedding Dance Unforgettable</h3>
-                    <ul class="marketing-points">
-                        <li>Expert instructors</li>
-                        <li>Flexible schedules</li>
-                        <li>Affordable prices</li>
-                    </ul>
-                    <a href="#" class="theme-btn" style="margin: 20px;">Book a Class</a>
-                </div>
-            </div>
-        </section>
-        </div> -->
         <section class="wpo-banner-section">
             <h4>Celebrate Love Through Dance</h4>
         </section>
         <!-- end page-title -->
         <!-- wpo-checkout-area start-->
         <div class="wpo-checkout-area section-padding">
+
             <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title">
+                            <h2>Checkout</h2>
+                            <h3 id="product_description">Product</h3>
+                            <h3 id="price_description" style="display: none;">Price</h3>
+                        </div>
+                    </div>
                 <form>
                     <div class="checkout-wrap">
                         <div class="row">
@@ -253,9 +244,7 @@
                                                     </div>
                                                     <div class="col-lg-6 col-md-12 col-12">
                                                         <label for="Country">Country</label>
-                                                        <select name="address" id="Country" class="form-control">
-                                                            <option disabled="" selected="">Deutschland</option>
-                                                        </select>
+                                                        <input type="text" placeholder="" id="Country" name="Country">
                                                     </div>
                                                     <div class="col-lg-6 col-md-12 col-12">
                                                         <label for="City">Bundesland</label>
@@ -295,72 +284,26 @@
                                                             <li class="addToggle">
                                                                 <input id="add" type="radio" name="payment"
                                                                     checked="checked" value="30">
-                                                                <label for="add">Payment By Card</label>
+                                                                <label for="add">Online Payment (Paypal +2%)</label>
                                                             </li>
                                                             <li class="removeToggle">
                                                                 <input id="remove" type="radio" name="payment"
                                                                     value="30">
-                                                                <label for="remove">Cash On delivery</label>
+                                                                <label for="remove">Bank Payment</label>
                                                             </li>
                                                         </ul>
                                                     </div>
-                                                    <div id="open5" class="payment-name active">
+                                                    <div >
                                                         <ul>
-                                                            <li class="visa"><input id="1" type="radio" name="size"
-                                                                    value="30">
-                                                                <label for="1"><img
-                                                                        src="assets/images/checkout/img-1.png"
-                                                                        alt=""></label>
-                                                            </li>
-                                                            <li class="mas"><input id="2" type="radio" name="size"
-                                                                    value="30">
-                                                                <label for="2"><img
-                                                                        src="assets/images/checkout/img-2.png"
-                                                                        alt=""></label>
-                                                            </li>
-                                                            <li class="ski"><input id="3" type="radio" name="size"
-                                                                    value="30">
-                                                                <label for="3"><img
-                                                                        src="assets/images/checkout/img-3.png"
-                                                                        alt=""></label>
-                                                            </li>
-                                                            <li class="pay"><input id="4" type="radio" name="size"
-                                                                    value="30">
-                                                                <label for="4"><img
-                                                                        src="assets/images/checkout/img-4.png"
-                                                                        alt=""></label>
+                                                            <li class="pay">
+                                                                <label for="paypal"><img src="assets/images/checkout/img-4.png" alt=""></label>
                                                             </li>
                                                         </ul>
-                                                        <div class="contact-form form-style">
-                                                            <div class="row">
-                                                                <div class="col-lg-6 col-md-12 col-12">
-                                                                    <label for="holder">Card holder Name</label>
-                                                                    <input type="text" placeholder="" id="holder"
-                                                                        name="name">
-                                                                </div>
-                                                                <div class="col-lg-6 col-md-12 col-12">
-                                                                    <label for="card">Card Number</label>
-                                                                    <input type="text" placeholder="" id="card"
-                                                                        name="card">
-                                                                </div>
-                                                                <div class="col-lg-6 col-md-12 col-12">
-                                                                    <label for="CVV">CVV</label>
-                                                                    <input type="text" placeholder="" id="CVV"
-                                                                        name="CVV">
-                                                                </div>
-                                                                <div class="col-lg-6 col-md-12 col-12">
-                                                                    <label for="date">Expire Date</label>
-                                                                    <input type="text" placeholder="" id="date"
-                                                                        name="date">
-                                                                </div>
-                                                                <div class="col-lg-12 col-md-12 col-12">
-                                                                    <div class="submit-btn-area text-center">
-                                                                        <button class="theme-btn-s4" type="submit">Place
-                                                                            Order</button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                        <br>
+                                                        <p>Bank Name: Deutsche Bank</p>
+                                                        <p>Account Number: 1234567890</p>
+                                                        <p>IBAN: DE1234567890</p>
+                                                        <p>SWIFT: DEUTDEFF</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -372,56 +315,29 @@
                                 <div class="cout-order-area">
                                     <div class="oreder-item ">
                                         <ul>
-                                            <li class="o-header">Your Order<span>( 6 )</span></li>
-                                            <li>Product 1 X 1<span>50</span></li>
-                                            <li>Product 2 X 1<span>50</span></li>
-                                            <li>Product 3 X 2<span>100</span></li>
-                                            <li>Product 4 X 1<span>50</span></li>
-                                            <li class="o-middle">Product 5 X 1<span>50</span></li>
-                                            <li class="s-total">Sub Total<span>400</span></li>
-                                            <li>( + ) VAT<span>100</span></li>
-                                            <li>( + ) Eco Tax <span>100</span></li>
-                                            <li>( - ) Discount Price<span>100</span></li>
-                                            <li class="o-bottom">Total price <span>500</span></li>
+                                            <li class="o-header">Your Order<span></span></li>
+                                            <li id="product_id" class="o-middle">Wedding Dance<span id="price_id">50</span></li>
+                                            <li class="s-total">Sub Total<span id="price_id2">400</span></li>
+                                            <li class="o-bottom">Total price <span id="price_id3">500</span></li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div style="align-items: center;justify-content: center;align-content: center;">
+                        <button id="submit_button" class="theme-btn">Place Order</button>
+                        <div id="message"></div>
+                        <div id="success"></div>
+                        <div id="error"></div>
+                        <br>
+                        <div id="paypal-button-container"></div>
+                        <div id="bank-button-container"></div>
+                    </div>
                 </form>
             </div>
         </div>
         <!-- wpo-checkout-area end-->
-        <!-- start wpo-partners-section -->
-        <section class="wpo-partners-section section-padding pt-0">
-            <h2 class="hidden">Partners</h2>
-            <div class="container">
-                <div class="row">
-                    <div class="col col-xs-12">
-                        <div class="partner-grids partners-slider owl-carousel">
-                            <div class="grid">
-                                <img src="assets/images/partners/1.png" alt>
-                            </div>
-                            <div class="grid">
-                                <img src="assets/images/partners/2.png" alt>
-                            </div>
-                            <div class="grid">
-                                <img src="assets/images/partners/3.png" alt>
-                            </div>
-                            <div class="grid">
-                                <img src="assets/images/partners/4.png" alt>
-                            </div>
-                            <div class="grid">
-                                <img src="assets/images/partners/5.png" alt>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- end container -->
-        </section>
-        <!-- end wpo-partners-section-->
-
         <!-- wpo-site-footer start -->
         <div class="wpo-site-footer text-center">
             <div class="container">
@@ -457,7 +373,7 @@
                     </div>
                     <div class="col-12">
                         <div class="copyright">
-                            <p>© Copyright 2022 | <a href="index.html">LoveLove</a> | All right reserved.</p>
+                            <p>© Copyright 2022 | <a href="index.html">Weddind Dance World</a> | All right reserved.</p>
                         </div>
                     </div>
                 </div>
@@ -498,6 +414,7 @@
     <script src="assets/js/modernizr.custom.js"></script>
     <script src="assets/js/jquery.dlmenu.js"></script>
     <script src="assets/js/jquery-plugin-collection.js"></script>
+    <script src="assets/js/checkout.js"></script>
     <!-- Custom script for this template -->
     <script src="assets/js/script.js"></script>
 </body>
