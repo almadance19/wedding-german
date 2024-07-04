@@ -63,7 +63,7 @@
 
 
                 // Bank Payment - Send Email
-                const data = JSON.stringify([name, adress, email, product_description, price]);
+                const data = JSON.stringify([name, adress, email, product_description, price,"notpaidyet","Bank"]);
 
                 const scriptURL = 'https://script.google.com/macros/s/AKfycby0bgJuGUwB4ltdEHfAyJed14jHiL4_o1mRU6lvl9UfY2iIKN-Q7az_avwKPFYkyTs/exec';
     
@@ -107,7 +107,7 @@
 
 
                 // PayPal Payment - Create PayPal Button
-                createPayPalButton(new_price,product_description);
+                createPayPalButton(new_price,product_description,name, adress, email);
             }
         });
 
@@ -153,7 +153,7 @@
                         document.getElementById('message').innerHTML = 'Payment completed! Sending Email...';
 
                         // Send Email
-                        const data = JSON.stringify([name, adress, email, product_description, price]);
+                        const data = JSON.stringify([name, adress, email, product_description, price,"paid","PayPal"]);
                         const scriptURL = 'https://script.google.com/macros/s/AKfycby0bgJuGUwB4ltdEHfAyJed14jHiL4_o1mRU6lvl9UfY2iIKN-Q7az_avwKPFYkyTs/exec';
                         fetch(scriptURL, {
                             method: 'POST',
