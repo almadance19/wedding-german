@@ -65,8 +65,8 @@
                 // Bank Payment - Send Email
                 const data = JSON.stringify([name, adress, email, product_description, price,"notpaidyet","Bank"]);
 
-                const scriptURL = 'https://script.google.com/macros/s/AKfycby0bgJuGUwB4ltdEHfAyJed14jHiL4_o1mRU6lvl9UfY2iIKN-Q7az_avwKPFYkyTs/exec';
-    
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbyCseIQroVxEV5TrWXC6-k3VoZbJxmweLb_V4PgGZlidCzyrJy7XtHiqgdn-V9HGLoP/exec';
+
                 fetch(scriptURL, {
                     method: 'POST',
                     headers: {
@@ -154,7 +154,8 @@
 
                         // Send Email
                         const data = JSON.stringify([name, adress, email, product_description, price,"paid","PayPal"]);
-                        const scriptURL = 'https://script.google.com/macros/s/AKfycby0bgJuGUwB4ltdEHfAyJed14jHiL4_o1mRU6lvl9UfY2iIKN-Q7az_avwKPFYkyTs/exec';
+                         const scriptURL = 'https://script.google.com/macros/s/AKfycbyCseIQroVxEV5TrWXC6-k3VoZbJxmweLb_V4PgGZlidCzyrJy7XtHiqgdn-V9HGLoP/exec';
+
                         fetch(scriptURL, {
                             method: 'POST',
                             headers: {
